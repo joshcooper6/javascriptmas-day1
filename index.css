@@ -1,0 +1,70 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--dark-green);
+    background-color: var(--light-green);
+}
+
+.container {
+    border: var(--snow) 4px solid;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1em;
+    background: var(--wine-red);
+    margin: 1em;
+    color: var(--snow);
+    padding: 1em 2em;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.container h1 {
+    font-size: 2em;
+    max-width: 300px;
+    margin-bottom: 0;
+}
+
+.countdown-display {
+    font-size: 10em;
+    margin: 0;
+    animation: fade 10s;
+    -webkit-text-stroke: 3px var(--light-green);
+}
+
+.countdown-text {
+    margin-top: 0;
+}
+
+#active--countdown {
+    font-weight: bold;
+    font-size: 1.3em;
+    animation: fade 10s;
+    max-width: 300px;
+}
+    
+@keyframes fade {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
