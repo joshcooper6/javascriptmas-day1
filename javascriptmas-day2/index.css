@@ -1,0 +1,123 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: rgba(212,45,47, .6);
+  --dark-green: rgba(52,77,47, .4);
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+  --snow-gif: url('https://pa1.narvii.com/7025/d7bf6f737f307e3f0811a5e92d737e2eb0c32f7cr1-640-371_hq.gif');
+  --fireplace-gif: url('https://i.gifer.com/origin/6c/6c84608c2eb5916f70ec070bc35b2c01.gif');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+body {
+    background-color: var(--wine-red);
+    height: 100vh;
+    flex-direction: column;
+    background-image: var(--fireplace-gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background: rgba(0,0,0, .5);
+    border: var(--light-green) 3px solid;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 3em;
+    min-width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+p {
+    font-size: 45px;
+}
+
+.christmas {
+    font-family: 'Mountains of Christmas', cursive;
+    color: var(--light-green);
+    background-color: var(--wine-red);
+}
+
+.snow {
+    font-family: 'Lobster Two', cursive;
+    color: var(--snow);
+    background-image: var(--snow-gif);
+    background-color: var(--snow);
+    background-repeat: norepeat;
+    background-size: cover;
+}
+
+.christmas,
+.snow {
+    text-shadow: 3px 1px 10px black;
+}
+
+.snow .container {
+    color: #F0F4F7;
+    border: var(--snow) 3px solid;
+    background-color: var(--dark-green);
+}
+
+.snow h3 {
+    color: var(--dark-green);
+    position: absolute;
+}
+
+#full-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 1em;
+}
+
+button#christmas {
+    font-family: 'Mountains of Christmas', cursive;
+    color: var(--snow);
+    background-color: var(--wine-red);
+}
+
+button#snow {
+    font-family: 'Lobster Two', cursive;
+    color: var(--snow);
+    background-color: var(--light-green);
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: 1000ms;
+}
+
+@keyframes zoom-in-and-out {
+    0% {
+        transform: scale(.7);
+    }
+    
+    50% {
+        transform: scale(1.5);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+    
+}
